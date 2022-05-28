@@ -16,17 +16,17 @@ function sortStudents(array $students): array
 {
     // edit the code below
     $max = 1;
-    $sortedStudent = [];
+    $sortedStudents = [];
 
     for ($i = 0; $i < count($students); $i++) {
 
         if ($students[$i]->averageScore > $students[$max]->averageScore) {
-            $sortedStudent[$max] = $students[$i];
+            $sortedStudents[$max] = $students[$i];
         }
         $max++;
     }
 
-    return $sortedStudent;
+    return array_values($sortedStudents);
 }
 
 function findStudentByPosition(array $students, int $position): array
