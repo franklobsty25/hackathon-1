@@ -15,13 +15,25 @@ function getStudents(): array
 function sortStudents(array $students): array
 {
     // edit the code below
-    return [];
+    $max = 1;
+    $sortedStudent = [];
+
+    for ($i = 0; $i < count($students); $i++) {
+
+        if ($students[$i]->averageScore > $students[$max]->averageScore) {
+            $sortedStudent[$max] = $students[$i];
+        }
+        $max++;
+    }
+
+    return $sortedStudent;
 }
 
 function findStudentByPosition(array $students, int $position): array
 {
     // edit the code below
-    return [];
+
+    return $students[$position];
 }
 
 $students = getStudents();
